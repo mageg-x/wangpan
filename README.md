@@ -29,17 +29,9 @@
 
 在使用前，您需要获取对应网盘的Cookie信息。
 
-#### TeraBox Cookie获取方法
+#### Cookie获取方法
 
 1. 登录 [TeraBox官网](https://www.terabox.com/)
-2. 按F12打开开发者工具
-3. 切换到Network标签页
-4. 刷新页面
-5. 找到一个请求，在Headers标签页中找到Cookie字段
-6. 复制完整的Cookie值
-
-#### Baidu网盘 Cookie获取方法
-
 1. 登录 [百度网盘官网](https://pan.baidu.com/)
 2. 按F12打开开发者工具
 3. 切换到Network标签页
@@ -87,7 +79,7 @@ print(f"下载结果: {result}")
 ## 项目结构
 
 ```
-multi-cloud-direct-link/
+wangpan/
 ├── TeraBox/
 │   ├── __init__.py    # TeraBox包初始化文件
 │   └── terabox.py     # TeraBox核心功能实现
