@@ -79,15 +79,29 @@ print(f"下载结果: {result}")
 ## 项目结构
 
 ```
-wangpan/
-├── TeraBox/
-│   ├── __init__.py    # TeraBox包初始化文件
-│   └── terabox.py     # TeraBox核心功能实现
-├── Baidu/
-│   ├── __init__.py    # Baidu包初始化文件
-│   └── baidu.py       # Baidu网盘核心功能实现
-├── main.py           # 示例代码和测试文件
-└── README.md         # 项目说明文档
+wangpan/                              # 项目根目录
+├── app/                              # 下载客户端，支持多平台（macOS、Linux、Windows）
+│   ├── aria2/                        # Aria2下载工具目录
+│   │   ├── darwin/                   # macOS平台的Aria2二进制文件
+│   │   ├── linux/                    # Linux平台的Aria2二进制文件
+│   │   └── win32/                    # Windows平台的Aria2二进制文件
+│   ├── src/                          # 应用程序源代码
+│   │   ├── electron/                 # Electron主进程代码
+│   │   └── render/                   # Electron渲染进程代码
+├── frontend/                         # 网页前端代码目录
+│   ├── src/                          # 前端源代码
+└── server/                           # 服务器代码目录
+    ├── Baidu/                        # 百度网盘API实现
+    │   ├── __init__.py               # Baidu包初始化文件
+    │   └── baidu.py                  # 百度网盘核心功能实现
+    ├── TeraBox/                      # TeraBox API实现
+    │   ├── __init__.py               # TeraBox包初始化文件
+    │   └── terabox.py                # TeraBox核心功能实现
+    ├── main.py                       # 示例代码和测试文件
+    ├── public/                       # 公共API目录
+    │   ├── __init__.py               # public包初始化文件
+    │   └── api.py                    # 公共API接口实现
+    ├── server.py                     # 服务器主程序
 ```
 
 ## 贡献指南
